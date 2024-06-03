@@ -1,0 +1,13 @@
+version: '3.9'
+
+networks:
+  internal1:
+  
+services:
+  demo_image:
+    image: demo_image
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    networks:
+      - internal1
